@@ -38,14 +38,14 @@ These DFUs are pre-DVT, and can be dangerous. If flashed on newer boards, damage
 
 ## ST-LINK info
 
-DVT4-prod: no
+*DVT4-prod:* no
 
-DVT3: Solder wires to these pins on the bodyboard, and hook them up to the ST-LINK you have. Rightmost (in the picture) is GND, next to that is NRST, then SWDIO, then SWCLK. Put the bot on the charger and make sure it is on. In the official ST-LINK utility on Windows (openOCD and others probably work too) press connect and do what you want. To program, go into the `Target` tab, press `Program`, select the `dvt3-skipverify-1.6syscon.bin`, then flash.
+*DVT3:* Solder wires to these pins on the bodyboard, and hook them up to the ST-LINK you have. Rightmost (in the picture) is GND, next to that is NRST, then SWDIO, then SWCLK. Put the bot on the charger and make sure it is on. In the official ST-LINK utility on Windows (openOCD and others probably work too) press connect and do what you want. To program, go into the `Target` tab, press `Program`, select the `dvt3-skipverify-1.6syscon.bin`, then flash.
 
 If you have an ST-LINK clone (size of a flash drive, metal enclosure), the RST pin probably isn't used in STM32 mode. This can be worked around. Make sure the bot is on the charger, all the other pins are hooked up, and you have a good way to short NRST and GND. Some people may put a pushbutton there, some may just slide a DuPont on the unused GND on the ST-LINK. Press connect in the utility, immediately short NRST and GND, keep it shorted for 2 seconds, then let go and you should be connected.
 
-DVT1-2: You can do the same steps as DVT3, however you don't need to worry about NRST. All you need to hook up is GND, SWCLK, and SWDIO. When those are hooked up, make sure the board is off, put the board on the charger, and immediately (sometime within 2 seconds after the board first shows a circle light) press connect in the utility.
+*DVT1-2:* You can do the same steps as DVT3, however you don't need to worry about NRST. All you need to hook up is GND, SWCLK, and SWDIO. When those are hooked up, make sure the board is off, put the board on the charger, and immediately (sometime within 2 seconds after the board first shows a circle light) press connect in the utility.
 
-Pre-DVT1: Probably the same as DVT1-2. I don't expect that it works with production firmware.
+*Pre-DVT1:* Probably the same as DVT1-2. I don't expect that it works with production firmware.
 
-Whiskey: Same as DVT3 but don't program `dvt3-skipverify-1.6syscon.bin`
+*Whiskey:* Same as DVT3 but don't program `dvt3-skipverify-1.6syscon.bin`
